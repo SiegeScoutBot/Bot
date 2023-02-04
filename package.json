@@ -1,0 +1,37 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "A Discord Bot designated to giving useful stats about Rainbow Six Siege",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "start:deploy": "ts-node src/index.ts --deploy",
+    "start:watch": "ts-node-dev src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiegeTrackBot/Bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SiegeTrackBot/Bot/issues"
+  },
+  "homepage": "https://github.com/SiegeTrackBot/Bot#readme",
+  "keywords": [],
+  "author": "ImMaxM",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@types/bunyan": "^1.8.8",
+    "@types/bunyan-format": "^0.2.5",
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@sentry/node": "^7.36.0",
+    "@sentry/tracing": "^7.36.0",
+    "bunyan": "^1.8.15",
+    "bunyan-format": "^0.2.1",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3"
+  }
+}
