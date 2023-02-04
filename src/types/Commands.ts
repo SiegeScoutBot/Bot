@@ -21,6 +21,10 @@ export default class SlashCommand {
     this.options = options;
   }
 
+  async execute(_interaction: ChatInputCommandInteraction) {
+    throw new Error("Command not implemented");
+  }
+
   async build(
     command: SlashCommandBuilder
   ): Promise<SlashCommandBuilder | RESTPostAPIApplicationCommandsJSONBody> {

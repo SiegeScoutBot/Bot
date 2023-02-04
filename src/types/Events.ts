@@ -9,7 +9,7 @@ export default class Event {
     this.once = once;
   }
 
-  async execute(...args: any) {
+  async execute(..._args: any) {
     throw new Error("Event not implemented");
   }
 

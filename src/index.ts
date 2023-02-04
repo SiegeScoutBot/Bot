@@ -1,4 +1,4 @@
-import fs, { readdirSync } from "fs";
+import { readdirSync } from "fs";
 import path from "path";
 import { logger } from "./utils/log";
 import Discord, { GatewayIntentBits } from "discord.js";
