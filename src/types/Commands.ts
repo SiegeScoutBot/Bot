@@ -1,6 +1,5 @@
 import {
   ChatInputCommandInteraction,
-  Client,
   PermissionResolvable,
   RESTPostAPIApplicationCommandsJSONBody,
   SlashCommandBuilder,
