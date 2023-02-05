@@ -54,7 +54,7 @@ export default class CommandHandler extends Event {
     try {
       await commandData.execute(interaction);
     } catch (error) {
-      logger.error(`Failed to run command ${commandData.name}: `, error);
+      logger.error(`Failed to run command ${commandData.name}: ${error}`);
       logger.error(
         `Command ran by ${interaction.user.tag} (${interaction.user.id}) in ${
           interaction.guild.name ?? "Not in Guild"

@@ -25,20 +25,20 @@ class Logger {
     return Logger.instance;
   }
 
-  public debug(message: string, ...args: any[]): void {
-    this.logger.debug(message, ...args);
+  public debug(message: string): void {
+    this.logger.debug(message);
   }
 
-  public info(message: string, ...args: any[]): void {
-    this.logger.info(message, ...args);
+  public info(message: string): void {
+    this.logger.info(message);
   }
 
-  public warn(message: string, ...args: any[]): void {
-    this.logger.warn(message, ...args);
+  public warn(message: string): void {
+    this.logger.warn(message);
   }
 
-  public error(message: string | Error, ...args: any[]): void {
-    this.logger.error(message, ...args);
+  public error(message: string | Error): void {
+    this.logger.error(message);
   }
 }
 
