@@ -17,7 +17,7 @@ export default class CommandHandler extends Event {
     const commandData = commands.get(command.toLowerCase());
 
     if (!commandData) {
-      logger.warn("Missing command " + command);
+      logger.warn(`Missing command ${command}`);
       return;
     }
 
