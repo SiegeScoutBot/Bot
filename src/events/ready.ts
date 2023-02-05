@@ -49,7 +49,6 @@ export default class Ready extends Event {
         commands.map(async (command: SlashCommand) => {
           commandData.push(
             await command.build(
-              Client,
               new SlashCommandBuilder()
                 .setName(command.name)
                 .setDescription(command.description)
