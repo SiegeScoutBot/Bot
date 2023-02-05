@@ -17,11 +17,12 @@ export default class CommandHandler extends Event {
     const commandData = commands.get(command.toLowerCase());
 
     if (!commandData) {
-      return void logger.warn("Missing command " + command);
+      logger.warn("Missing command " + command);
+      return;
     }
 
     if (!interaction.guild) {
-      return void interaction.reply({
+      interaction.reply({
         embeds: [
           primaryEmbed(
             "",
@@ -30,6 +31,7 @@ export default class CommandHandler extends Event {
         ],
         ephemeral: true,
       });
+      return;
     }
 
     const transaction = startTransaction({

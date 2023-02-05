@@ -9,7 +9,9 @@ import Events from "./types/Events";
 logger.info("🤖 Starting SiegeScout...");
 
 import "./utils/config";
+// Move this to a more dynamic way of loading services
 import "./services/sentry";
+import "./services/meilisearch";
 
 export const start = new Date();
 
