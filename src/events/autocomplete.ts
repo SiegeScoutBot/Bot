@@ -1,5 +1,4 @@
 import { AutocompleteInteraction } from "discord.js";
-import { logger } from "../utils/log";
 import Event from "../structures/Events";
 import { client } from "../services/meilisearch";
 

@@ -84,5 +84,6 @@ export default class Ready extends Event {
         return logger.error(`${error}`);
       }
     }
+    return;
   }
 }

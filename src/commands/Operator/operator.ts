@@ -63,32 +63,33 @@ export default class Ping extends SlashCommand {
           value: `<:66:1033864866781466765>\`${operator.quote}\`<:99:1033864865384763402>`,
         },
         {
+          name: "Information",
+          value: `**Name:** ${operator.name}\n**Role:** ${operator.role}\n**Unit:** ${operator.unit}\n**Season:** ${operator.meta?.season}`,
+          inline: true,
+        },
+        {
           name: "Ratings",
           value: `**Health**: ${operator.ratings?.health}\n**Speed**: ${operator.ratings?.speed}\n**Difficulty**: ${operator.ratings?.difficulty}`,
           inline: true,
         },
         {
-          name: "Information",
-          value: `**Name:** ${operator.name}\n**Role:** ${operator.role}\n**Unit:** ${operator.unit}`,
+          name: "Unlock",
+          value: `**Renown:** <:renown:1072182131947749396> \`${operator.unlock?.renown}\`\n**R6 Credits:** <:credits:1072182820048474162> \`${operator.unlock?.r6credits}\``,
           inline: true,
         },
         {
-          name: "Meta",
+          name: "Biometrics",
           value: `**Birthplace:** [**${
             operator.bio?.birthplace
-          }**](https://en.wikipedia.org/wiki/${operator.bio?.birthplace
-            .split(" ")
-            .pop()}) ${
-            operator.bio?.emoji
+          }**](https://en.wikipedia.org/wiki/${
+            operator.bio?.birthplace == "Unknown"
+              ? "Ubisoft"
+              : operator.bio?.birthplace.split(" ").pop()
+          }) ${
+            operator.bio?.emoji == "n" ? "" : operator.bio?.emoji
           }\n**Gender:** ${displayGender}\n**Height:** \`${
             operator.meta?.height! / 100
-          }m\`\n**Weight:** \`${operator.meta?.weight}kg\`\n**Season:** ${
-            operator.meta?.season
-          }`,
-        },
-        {
-          name: "Unlock",
-          value: `**Renown:** <:renown:1072182131947749396> \`${operator.unlock?.renown}\`\n**R6 Credits:** <:credits:1072182820048474162> \`${operator.unlock?.r6credits}\``,
+          }m\`\n**Weight:** \`${operator.meta?.weight}kg\``,
         },
       ]);
 
