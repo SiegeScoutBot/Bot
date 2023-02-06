@@ -6,8 +6,8 @@ import Discord, {
 } from "discord.js";
 import { Client, commands, start } from "../index";
 import { logger } from "../utils/log";
-import Event from "../types/Events";
-import SlashCommand from "../types/Commands";
+import Event from "../structures/Events";
+import SlashCommand from "../structures/Commands";
 
 export default class Ready extends Event {
   name = "ready";

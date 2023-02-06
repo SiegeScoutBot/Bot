@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "update:search": "ts-node scripts/meilisearch/addDocuments.ts",
     "start": "ts-node src/index.ts",
     "start:deploy": "ts-node src/index.ts --deploy",
     "start:watch": "ts-node-dev src/index.ts"
@@ -32,6 +33,7 @@
     "bunyan": "^1.8.15",
     "bunyan-format": "^0.2.1",
     "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "meilisearch": "^0.31.1"
   }
 }

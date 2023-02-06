@@ -3,7 +3,7 @@ import { ChannelType, ChatInputCommandInteraction } from "discord.js";
 import { commands } from "../index";
 import { primaryEmbed } from "../utils/embeds";
 import { logger } from "../utils/log";
-import Event from "../types/Events";
+import Event from "../structures/Events";
 
 export default class CommandHandler extends Event {
   constructor() {
@@ -18,6 +18,15 @@ export default class CommandHandler extends Event {
 
     if (!commandData) {
       logger.warn(`Missing command ${command}`);
+      await interaction.reply({
+        embeds: [
+          primaryEmbed(
+            "",
+            "<:Cross:1033439936944295986> **Error!** Something went wrong while executing this command!"
+          ),
+        ],
+        ephemeral: true,
+      });
       return;
     }
 

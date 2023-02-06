@@ -1,6 +1,6 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js";
 import { primaryEmbed } from "../../utils/embeds";
-import SlashCommand from "../../types/Commands";
+import SlashCommand from "../../structures/Commands";
 
 export default class Ping extends SlashCommand {
   name = "ping";

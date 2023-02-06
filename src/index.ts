@@ -3,8 +3,8 @@ import path from "path";
 import { logger } from "./utils/log";
 import Discord, { GatewayIntentBits } from "discord.js";
 
-import SlashCommand from "./types/Commands";
-import Events from "./types/Events";
+import SlashCommand from "./structures/Commands";
+import Events from "./structures/Events";
 
 logger.info("🤖 Starting SiegeScout...");
 
