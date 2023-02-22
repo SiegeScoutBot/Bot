@@ -1,0 +1,27 @@
+# SiegeScout Bot is not included currently
+
+version: '3.8'
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    environment:
+      - MEILI_MASTER_KEY=masterkey
+      - MEILI_NO_ANALYTICS=true
+    ports:
+      - 7700:7700
+    volumes:
+      - ./docker/meilisearch/data.ms:/data.ms
+  
+  redis:
+    image: 'docker.dragonflydb.io/dragonflydb/dragonfly'
+    ulimits:
+      memlock: -1
+    ports:
+      - 6379:6379
+    # For better performance, consider `host` mode instead `port` to avoid docker NAT.
+    # `host` mode is NOT currently supported in Swarm Mode.
+    # https://docs.docker.com/compose/compose-file/compose-file-v3/#network_mode
+    # network_mode: "host"
+    volumes:
+      - ./docker/redis/data:/data

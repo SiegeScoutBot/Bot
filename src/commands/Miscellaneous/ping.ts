@@ -1,6 +1,7 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js";
 import { primaryEmbed } from "../../utils/embeds";
 import SlashCommand from "../../structures/Commands";
+import { redis } from "../../services/redis";
 
 export default class Ping extends SlashCommand {
   name = "ping";

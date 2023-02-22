@@ -1,5 +1,8 @@
 scripts
 
+# Docker Container Files
+docker/
+
 # Logs
 logs
 *.log
